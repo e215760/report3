@@ -99,9 +99,14 @@ public class Hero {
      * @param e 攻撃対象
      */
     public void attack(Enemy e){
+        if (this.dead){
+            System.out.println(name + "は攻撃できない...");
+        }
+        else{
         int damage = (int)(Math.random() * attack);
         System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", name, e.getEnemyName(), damage);
         e.wounded(damage);
+        }
     }
 
     /**
@@ -111,7 +116,7 @@ public class Hero {
      */
     public void wounded(int damage){
         hitPoint -= damage;
-        if( hitPoint < 0 ) {
+        if( hitPoint <= 0 ) {
             dead = true;
             System.out.printf("勇者%sは道半ばで力尽きてしまった。\n", name);
         }
