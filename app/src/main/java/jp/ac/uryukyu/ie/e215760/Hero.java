@@ -2,55 +2,88 @@ package jp.ac.uryukyu.ie.e215760;
 
 /**
  * ヒーロークラス。
- *  String name; //敵の名前
- *  int hitPoint; //敵のHP
- *  int attack; //敵の攻撃力
- *  boolean dead; //敵の生死状態。true=死亡。
+ *  String name; //heroの名前
+ *  int hitPoint; //heroのHP
+ *  int attack; //heroの攻撃力
+ *  boolean dead; //heroの生死状態。true=死亡。
  * Created by tnal on 2016/11/13.
  */
 public class Hero {
     ////////////////////////
     private String name;
 
+
+    /**
+     * heroの名前を得るメソッド
+     * @return heroの名前
+     */
     public String getHeroName(){
         return this.name;
     }
 
+    /**
+     * heroの名前を変更するメソッド
+     * @param _name　変更するheroの名前
+     */
     public void setHeroName(String _name){
         this.name = _name;
     }
     ////////////////////////
     private int hitPoint;
 
+    /**
+     * heroのHPの値を得るメソッド
+     * @return　heroのHP
+     */
     public int getHeroHP(){
         return this.hitPoint;
     }
+    /**
+     * heroのHPの値を変更するメソッド
+     * @param _hitPoint　変更するHPの値
+     */
     public void setHeroHp(int _hitPoint){
         this.hitPoint = _hitPoint;
     }
     ////////////////////////
     private int attack;
 
+    /**
+     * heroの攻撃力の値を得るメソッド
+     * @return heroの攻撃力
+     */
     public int getHeroAttack(){
         return this.attack;
     }
+    /**
+     * heroの攻撃力の値を変更するメソッド
+     * @param _attack　変更するheroの攻撃力
+     */
     public void setHeroAttack(int _attack){
         this.attack = _attack;
     }
     ////////////////////////
     private boolean dead;
     
+    /**
+     * heroの生死状態を確認するメソッド
+     * @return　heroの生死状態
+     */
     public boolean getHeroDead(){
         return this.dead;
     }
+    /**
+     * heroの生死状態を変更するメソッド
+     * @param _dead 変更するheroの生死状態
+     */
     public void setHeroDead(boolean _dead){
         this.dead = _dead;
     }
     /**
-     * コンストラクタ。名前、最大HP、攻撃力を指定する。
-     * @param name ヒーロー名
-     * @param maximumHP ヒーローのHP
-     * @param attack ヒーローの攻撃力
+     * コンストラクタ。heroの名前、最大HP、攻撃力を指定する。
+     * @param name heroの名
+     * @param maximumHP heroのHP
+     * @param attack heroの攻撃力
      */
     public Hero (String name, int maximumHP, int attack) {
         this.name = name;
