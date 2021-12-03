@@ -6,7 +6,7 @@ public class LivingThing {
     public String getName(){
         return this.name;
     }
-    protected int hitPoint;
+    public int hitPoint;
 
     protected int attack;
     protected boolean dead;
@@ -19,6 +19,7 @@ public class LivingThing {
         this.hitPoint = _hitPoint;
         this.attack = _attack;
         this.dead = false;
+        System.out.printf("|%s > Hp %d , Att %d.| ",this.name, this.hitPoint, this.attack);
     }
     
     public void attack(LivingThing opponent){
@@ -32,7 +33,7 @@ public class LivingThing {
             opponent.wounded(damage);
         }
         
-        }
+    }
 
         public void wounded(int damage){
             hitPoint -= damage;
