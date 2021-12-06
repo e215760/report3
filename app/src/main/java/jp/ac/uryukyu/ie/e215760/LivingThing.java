@@ -2,14 +2,14 @@ package jp.ac.uryukyu.ie.e215760;
 
 public class LivingThing {
 
-    protected String name;
+    public String name;
     public String getName(){
         return this.name;
     }
     public int hitPoint;
 
-    protected int attack;
-    protected boolean dead;
+    public int attack;
+    public boolean dead;
     public boolean isDead(){
         return this.dead;
     }
